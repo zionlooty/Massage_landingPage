@@ -13,7 +13,7 @@ const slides = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full min-h-[100dvh]">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000 }}
@@ -24,11 +24,10 @@ const Hero = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
-              className="relative h-screen bg-cover bg-center flex items-center justify-center"
+              className="relative h-[100dvh] bg-cover bg-center bg-no-repeat flex items-center justify-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-
-              {/* 🌙 Soft Gradient Overlay */}
+              {/* Soft Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/60"></div>
 
               {/* TEXT */}
